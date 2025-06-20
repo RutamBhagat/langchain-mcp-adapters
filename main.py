@@ -32,32 +32,15 @@ async def main():
                 {
                     "messages": [
                         HumanMessage(
-                            content="Given the system of equations:\n1) 2x + y = 7\n2) x - y = 2\n3) 3x + 2y = 12\nFind the values of x and y."
+                            content="Calculate: (abs(-15) + sqrt(64)) * (5! % 7)"
                         )
                     ]
                 }
             )
 
-            # # Question as a Python string
-            # algebra_question = "Given the system of equations:\n1) 2x + y = 7\n2) x - y = 2\n3) 3x + 2y = 12\nFind the values of x and y."
+            math_question = "Calculate: (abs(-15) + sqrt(64)) * (5! % 7)"
 
-            # # Solution code (using first two equations to find x and y)
-            # from sympy import symbols, Eq, solve
-
-            # x, y = symbols('x y')
-            # eq1 = Eq(2*x + y, 7)
-            # eq2 = Eq(x - y, 2)
-            # solution = solve((eq1, eq2), (x, y))
-            # # solution: {x: 3, y: 1}
-
-            # # To check if the third equation is satisfied:
-            # eq3 = Eq(3*x + 2*y, 12)
-            # check = eq3.subs(solution)
-            # # check: True
-
-            # # You can also do it with plain Python (not symbolic math):
-            # # From eq2: y = x - 2
-            # # Substitute into eq1: 2x + (x - 2) = 7 → 3x = 9 → x = 3, y = 1
+            math_answer = 23
 
             print(result["messages"][-1].content)
 
